@@ -2,48 +2,50 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
-  // const [enteredTitle, setEnteredTitle] = useState("");
-  // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [enteredDate, setEnteredDate] = useState("");
-
-  // const titleChangeHandler = (event) => {
-  //   setEnteredTitle(event.target.value);
-  // };
-
-  // const amountChangeHandler = (event) => {
-  //   setEnteredAmount(event.target.value);
-  // };
-
-  // const dateChangeHandler = (event) => {
-  //   setEnteredDate(event.target.value);
-  // };
-
-  const [userInput, setuserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    enteredDate: "",
-  });
+  //using three state for all three inputs
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
   const titleChangeHandler = (event) => {
-    setuserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
-    });
+    setEnteredTitle(event.target.value);
   };
 
   const amountChangeHandler = (event) => {
-    setuserInput({
-      ...userInput,
-      enteredAmount: event.target.value,
-    });
+    setEnteredAmount(event.target.value);
   };
 
   const dateChangeHandler = (event) => {
-    setuserInput({
-      ...userInput,
-      enteredDate: event.target.value,
-    });
+    setEnteredDate(event.target.value);
   };
+
+  // using one State insted of three
+  // const [userInput, setuserInput] = useState({
+  //   enteredTitle: "",
+  //   enteredAmount: "",
+  //   enteredDate: "",
+  // });
+
+  // const titleChangeHandler = (event) => {
+  //   setuserInput({
+  //     ...userInput,
+  //     enteredTitle: event.target.value,
+  //   });
+  // };
+
+  // const amountChangeHandler = (event) => {
+  //   setuserInput({
+  //     ...userInput,
+  //     enteredAmount: event.target.value,
+  //   });
+  // };
+
+  // const dateChangeHandler = (event) => {
+  //   setuserInput({
+  //     ...userInput,
+  //     enteredDate: event.target.value,
+  //   });
+  // };
 
   return (
     <form>
