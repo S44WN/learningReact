@@ -20,7 +20,7 @@ const cartReducer = (state, action) => {
     let updatedItems;
 
     if (existingCartItem) {
-      updatedItem = {
+      const updatedItem = {
         ...existingCartItem,
         amount: existingCartItem.amount + action.item.amount,
       };
